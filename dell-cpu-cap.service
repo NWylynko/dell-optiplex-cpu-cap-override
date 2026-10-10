@@ -1,0 +1,12 @@
+[Unit]
+Description=Apply verified Dell CPU turbo override
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/dell-cpu-cap apply
+StateDirectory=dell-cpu-cap
+StateDirectoryMode=0700
+
+[Install]
+WantedBy=multi-user.target
